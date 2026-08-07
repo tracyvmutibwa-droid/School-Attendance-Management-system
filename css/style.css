@@ -49,3 +49,22 @@ button {
 button:hover {
     background-color: #1565c0;
 }
+.menu {
+    width: 300px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.menu a {
+    display: block;
+    background-color: #0d47a1;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.menu a:hover {
+    background-color: #1565c0;
+}
