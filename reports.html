@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Reports - Attendance System</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Supabase JS Client SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <div class="header-bar">
+        <div class="header-title">
+            🎓 Cavendish University Attendance System
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="students.html">Students</a>
+            <a href="teachers.html">Teachers</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="reports.html" class="active">Reports</a>
+            <a href="#" onclick="logoutUser()" class="btn-logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="page-title-box">
+            <h1>Attendance Reports</h1>
+            <p>Filter, calculate and monitor student attendance statistics</p>
+        </div>
+
+        <!-- Filter Controls Card -->
+        <div class="card">
+            <h2 style="margin-bottom: 15px; color: var(--primary-color);">Filter Reports</h2>
+
+            <form onsubmit="generateReports(event)">
+                <div class="filter-bar">
+                    
+                    <div class="form-group">
+                        <label for="student_id">Filter by Student</label>
+                        <select id="student_id">
+                            <option value="">All Students</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="start_date">Start Date</label>
+                        <input type="date" id="start_date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="end_date">End Date</label>
+                        <input type="date" id="end_date">
+                    </div>
+
+                    <div class="form-group" style="flex: 0;">
+                        <button type="submit" class="btn" style="min-width: 140px;">🔍 Apply Filter</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+        <!-- Report Summary Table Card -->
+        <div class="card">
+            <h2 style="margin-bottom: 15px; color: var(--primary-color);">Attendance Summary & Percentages</h2>
+
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Total Days</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                            <th>Late</th>
+                            <th>Attendance %</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reportsTableBody">
+                        <!-- Calculated dynamically in reports.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/config.js"></script>
+    <script src="../js/reports.js"></script>
+
+</body>
+</html>

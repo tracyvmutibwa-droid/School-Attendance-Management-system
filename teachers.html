@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Management - Attendance System</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Supabase JS Client SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+    <!-- Header Navigation -->
+    <div class="header-bar">
+        <div class="header-title">
+            🎓 Cavendish University Attendance System
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="students.html">Students</a>
+            <a href="teachers.html" class="active">Teachers</a>
+            <a href="attendance.html">Attendance</a>
+            <a href="reports.html">Reports</a>
+            <a href="#" onclick="logoutUser()" class="btn-logout">Logout</a>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="page-title-box">
+            <h1>Teacher Management</h1>
+            <p>Add new teachers and view teacher directory</p>
+        </div>
+
+        <!-- Add Teacher Form Card -->
+        <div class="card">
+            <h2 style="margin-bottom: 15px; color: var(--primary-color);">Add New Teacher</h2>
+
+            <form id="teacherForm" onsubmit="handleAddTeacher(event)">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 15px;">
+                    
+                    <div class="form-group">
+                        <label for="teacher_id">Teacher ID *</label>
+                        <input type="text" id="teacher_id" placeholder="e.g. TCH03" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="first_name">First Name *</label>
+                        <input type="text" id="first_name" placeholder="First Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="last_name">Last Name *</label>
+                        <input type="text" id="last_name" placeholder="Last Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject Taught *</label>
+                        <input type="text" id="subject" placeholder="e.g. Mathematics" required>
+                    </div>
+
+                </div>
+
+                <button type="submit" class="btn" style="margin-top: 10px;">➕ Add Teacher</button>
+            </form>
+        </div>
+
+        <!-- Teacher List Table Card -->
+        <div class="card">
+            <h2 style="margin-bottom: 15px; color: var(--primary-color);">Registered Teachers</h2>
+            
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Teacher ID</th>
+                            <th>Full Name</th>
+                            <th>Subject</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="teachersTableBody">
+                        <!-- Loaded dynamically from JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/config.js"></script>
+    <script src="../js/teachers.js"></script>
+
+</body>
+</html>
