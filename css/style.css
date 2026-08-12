@@ -100,7 +100,28 @@ button:hover {
 .navigation {
     text-align: center;
 }
+.attendance-table {
+    width: 90%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
 
+.attendance-table th,
+.attendance-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.attendance-table th {
+    background-color: #0d47a1;
+    color: white;
+}
+
+.attendance-table tr:nth-child(even) {
+    background-color: #f4f7fc;
+}
 .navigation a {
     color: #0d47a1;
     text-decoration: none;
