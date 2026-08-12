@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Attendance Reports</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <h1>Attendance Reports</h1>
+
+    <p>View and monitor student attendance</p>
+
+    <div class="form-container">
+
+        <form>
+
+            <label for="student_id">Student ID</label>
+            <input type="text"
+                   id="student_id"
+                   name="student_id"
+                   placeholder="Enter student ID">
+
+            <label for="start_date">Start Date</label>
+            <input type="date"
+                   id="start_date"
+                   name="start_date">
+
+            <label for="end_date">End Date</label>
+            <input type="date"
+                   id="end_date"
+                   name="end_date">
+
+            <button type="submit">Generate Report</button>
+
+        </form>
+
+    </div>
+
+    <h2>Attendance Summary</h2>
+
+    <table class="attendance-table">
+
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student Name</th>
+                <th>Present</th>
+                <th>Absent</th>
+                <th>Late</th>
+                <th>Attendance %</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>ST001</td>
+                <td>Sample Student</td>
+                <td>18</td>
+                <td>1</td>
+                <td>1</td>
+                <td>90%</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+    <br>
+
+    <div class="navigation">
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+
+</body>
+</html>
