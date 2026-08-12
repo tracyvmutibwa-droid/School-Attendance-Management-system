@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Attendance Management</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <h1>Attendance Management</h1>
+
+    <p>Record student attendance</p>
+
+    <div class="form-container">
+
+        <form>
+
+            <label for="student_id">Student ID</label>
+            <input type="text"
+                   id="student_id"
+                   name="student_id"
+                   placeholder="Enter student ID">
+
+            <label for="date">Date</label>
+            <input type="date"
+                   id="date"
+                   name="date">
+
+            <label for="status">Attendance Status</label>
+
+            <select id="status" name="status">
+
+                <option value="">Select status</option>
+
+                <option value="Present">Present</option>
+
+                <option value="Absent">Absent</option>
+
+                <option value="Late">Late</option>
+
+            </select>
+
+            <button type="submit">Record Attendance</button>
+
+        </form>
+
+    </div>
+
+    <br>
+
+    <div class="navigation">
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+
+</body>
+</html>
