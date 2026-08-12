@@ -68,3 +68,41 @@ button:hover {
 .menu a:hover {
     background-color: #1565c0;
 }
+.form-container {
+    width: 400px;
+    margin: 30px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px lightgray;
+}
+
+.form-container label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container input,
+.form-container select {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    margin-top: 20px;
+}
+
+.navigation {
+    text-align: center;
+}
+
+.navigation a {
+    color: #0d47a1;
+    text-decoration: none;
+    font-weight: bold;
+}
