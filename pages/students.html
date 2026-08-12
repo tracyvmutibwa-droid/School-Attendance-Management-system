@@ -1,1 +1,63 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Management</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+    <h1>Student Management</h1>
+
+    <p>Add a new student</p>
+
+    <div class="form-container">
+
+        <form>
+
+            <label for="student_id">Student ID</label>
+            <input type="text" id="student_id" name="student_id"
+                   placeholder="Enter student ID">
+
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name"
+                   placeholder="Enter first name">
+
+            <label for="last_name">Last Name</label>
+            <input type="text" id="last_name" name="last_name"
+                   placeholder="Enter last name">
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+                <option value="">Select gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+
+            <label for="class">Class</label>
+            <input type="text" id="class" name="class"
+                   placeholder="Enter class">
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone"
+                   placeholder="Enter phone number">
+
+            <button type="submit">Add Student</button>
+
+        </form>
+
+    </div>
+
+    <br>
+
+    <div class="navigation">
+        <a href="dashboard.html">Back to Dashboard</a>
+    </div>
+
+</body>
+</html>
