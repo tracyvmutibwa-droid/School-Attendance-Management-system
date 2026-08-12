@@ -122,6 +122,61 @@ button:hover {
 .attendance-table tr:nth-child(even) {
     background-color: #f4f7fc;
 }
+/* Dashboard */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f6f9;
+    color: #333;
+}
+
+h1 {
+    background: #0d47a1;
+    color: white;
+    padding: 25px;
+    margin: 0;
+    text-align: center;
+}
+
+body > p {
+    text-align: center;
+    font-size: 18px;
+    margin: 25px;
+}
+
+.menu {
+    max-width: 900px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.menu a {
+    display: block;
+    background: white;
+    color: #0d47a1;
+    text-decoration: none;
+    padding: 30px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.menu a:hover {
+    background: #0d47a1;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .menu {
+        grid-template-columns: 1fr;
+    }
+}
 .navigation a {
     color: #0d47a1;
     text-decoration: none;
